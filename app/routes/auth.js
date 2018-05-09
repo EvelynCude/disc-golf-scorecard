@@ -14,6 +14,16 @@ module.exports = function(app,passport){
         res.render("join-game");
     });
 
+    app.post('/games/:Name', function (req, res) {
+        
+        res.redirect("game");
+    });
+
+    app.post('/games/:CustomCourseID', function (req, res) {
+        res.redirect("game");
+    });
+
+
 
     app.get('/signup', authController.signup);
 

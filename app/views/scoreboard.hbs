@@ -33,35 +33,36 @@
         </div>
     </nav>
     <div class="container">
+
+        <!--Scoreboard Table Section-->
         <div class="row">
             <div class="col-xs-12" align="center">
-                <br>
-                <br>
-                <h4 class="sm-heading">New Game ID</h4>
-                <!--<<<<<<<<<<<<<<<<<<<<<< DELETE AND ADD HANDLEBARS GAME  ID ITEM BELOW  <<<<<<<<<<<<<<<-->
-                <h2 class="random">Hx2Z7</h2>
-                <!-- <h2>{{CustomCourse.CustomCourseID}}</h2> -->
-
-
-                <br>
-                <br>
-                <br>
-                <br>
-            </div>
-        </div>
-
-        <!--Input Form Section-->
-        <div class="row">
-            <div class="col-xs-0 col-lg-4"></div>
-            <div class="col-xs-12 col-lg-4" align="center">
-                <form action="/games/:Name" method="POST" class="create-form">
-                    <div class="form-group">
-                        <input type="text" class="box" id="ca" placeholder="Course Name" name="Name">
+                <div class="panel panel-primary"></div>
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            <strong>Scorecard</strong>
+                        </h3>
                     </div>
-                    <button class="btn btn-default btn-lg" id="btn-Start" type="submit">Start</button>
-                </form>
+                    <div class="panel-body">
+                        <table class="table table-hover" id='player-table'>
+                            <thead>
+                                <tr>  
+                                    <th>{{this.hole}}</th> 
+                                    {{#each user}}
+                                    <th>{{firstname}}</th>
+                                </tr>
+                                <tr>
+                                    <td>{{this.gamepar}}</td>
+                                    <td>{{this.userpar}}</td>
+                                </tr>
+                                {{/each}}
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
             </div>
-            <div class="col-xs-0 col-lg-4"></div>
+
         </div>
     </div>
 
